@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>⚠️ تحذير ⚠️</title>
+  <style>
+    :root{--red:#ff1f1f;--darkred:#7b0000;--bg:#000}
+    html,body{height:100%;margin:0;background:radial-gradient(circle at 50% 30%, #0b0b0b 0%, #000 60%);color:var(--red);font-family:"Courier New",monospace;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .wrap{width:100%;max-width:900px;padding:30px;text-align:center}
+    h1{font-size:3rem;margin:0 0 10px;text-shadow:0 0 20px rgba(255,31,31,.25),0 0 40px rgba(123,0,0,.12);animation:throb 0.8s infinite}
+    p.sub{opacity:.9;margin:10px 0;font-size:1.2rem;letter-spacing:.6px;animation:quake 0.25s infinite}
+    #typing{display:inline-block;border-right:3px solid var(--red);white-space:nowrap;overflow:hidden;font-size:1.2rem;margin-top:18px}
+    .footer{margin-top:26px;color:#c66;opacity:.9;font-size:.95rem}
+    @keyframes throb{
+      0%{transform:scale(1);filter:drop-shadow(0 0 6px rgba(255,31,31,.12))}
+      50%{transform:scale(1.03);filter:drop-shadow(0 0 18px rgba(255,31,31,.25))}
+      100%{transform:scale(1);filter:drop-shadow(0 0 6px rgba(255,31,31,.12))}
+    }
+    @keyframes quake{
+      0%{transform:translate(0,0)}
+      20%{transform:translate(-1px,1px)}
+      40%{transform:translate(1px,-1px)}
+      60%{transform:translate(-1px,0)}
+      80%{transform:translate(1px,1px)}
+      100%{transform:translate(0,0)}
+    }
+    @keyframes typingWidth {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    #typing .line{display:inline-block;white-space:nowrap;overflow:hidden;width:0;animation:typingWidth 5s steps(40,end) forwards, blink 1s step-end infinite}
+    @keyframes blink{50%{border-color:transparent}100%{border-color:var(--red)}}
+    .scan{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(0,0,0,0) 50%, rgba(255,255,255,0.01) 51%);background-size:100% 4px;mix-blend-mode:overlay;opacity:.25}
+  </style>
+</head>
+<body>
+  <div class="scan"></div>
+  <div class="wrap" role="main" aria-live="polite">
+    <h1>☠️ مرام الكصراوي — ثبّتي روحك ☠️</h1>
+    <p class="sub">راهم ليكونت تاعك كامل عندنا — الرجاء البقاء في الصفحة.</p>
+    <p class="sub">لوكان متطلبيش السماح من ياسين ✖️</p>
+    <p id="typing" aria-hidden="false"><span class="line">جاري الاتصال بالخوادم... 0%</span></p>
+    <div class="footer">(ملاحظة: هاذ الشي مزحة — تأكد تكون مع صاحبك قبل ما تعملها)</div>
+  </div>
+</body>
+</html>
